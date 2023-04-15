@@ -1,11 +1,11 @@
 package scenarioTest;
 import produit.*;
-import villagegauloisold.*;
+import villagegaulois.Etal;
 import personnages.*;
 public class ScenarioTest {
 	public static void main(String[] args) {
-		Gaulois ordralfabetix = new Gaulois("Ordralfabétix",9); 
-		Gaulois obelix = new Gaulois("Obélix",20); 
+		Gaulois ordralfabetix = new Gaulois("Ordralfabï¿½tix",9); 
+		Gaulois obelix = new Gaulois("Obï¿½lix",20); 
 		Gaulois asterix = new Gaulois("Asterix", 6); 
 		Sanglier sanglier1 = new Sanglier(2000, obelix); 
 		Sanglier sanglier2 = new Sanglier(1500, obelix); 
@@ -16,6 +16,14 @@ public class ScenarioTest {
 		Poisson poisson1 = new Poisson("lundi"); 
 		Poisson[] poissons = {poisson1}; 
 		Etal<Sanglier> etalSanglier1 = new Etal<>();
+		Etal<Sanglier> etalSanglier2 = new Etal<>();
+		Etal<Poisson> etalPoisson = new Etal<>();
+		etalSanglier1.installerVendeur(obelix, sangliersObelix, 8);
+		etalSanglier2.installerVendeur(asterix, sangliersAsterix, 10);
+		etalPoisson.installerVendeur(ordralfabetix, poissons, 7);
+		System.out.println(etalSanglier1.etatEtal());
+		System.out.println(etalSanglier2.etatEtal());
+		System.out.println(etalPoisson.etatEtal());
 	}
 	
 }

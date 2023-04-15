@@ -1,5 +1,5 @@
 package produit;
 
-public enum Unité {
+public enum UnitÃ© {
 	KILOGRAMME, LITRE, GRAMME, CENTILITRE, MILLILITRE, PAR_PIECE ;
 }

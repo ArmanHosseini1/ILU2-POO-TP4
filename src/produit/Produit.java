@@ -2,15 +2,16 @@ package produit;
 
 public abstract class Produit implements IProduit {
 	private String nom;
-	public Unité unité;
+	public UnitÃ© unitÃ©;
 	@Override
 	public String getNom() {
 		return nom;
 	}
 	@Override
 	public abstract String getDescription();
-	public Produit(String nom, Unité unité) {
+	public Produit(String nom, UnitÃ© unitÃ©) {
 		this.nom = nom;
-		this.unité = unité;
+		this.unitÃ© = unitÃ©;
 	}
+	public abstract double calculerPrix(double prix);
 }

@@ -3,10 +3,13 @@ package produit;
 public class Poisson extends Produit {
 	String date;
 	public Poisson(String date) {
-		super("poisson", Unité.KILOGRAMME);
+		super("poisson", UnitÃ©.KILOGRAMME);
 		this.date = date;
 	}
 	public String getDescription() {
-		return getNom() + " pêchés " + date;
+		return getNom() + " pï¿½chï¿½s " + date;
+	}
+	public double calculerPrix(double prix) {
+		return prix;
 	}
 }
